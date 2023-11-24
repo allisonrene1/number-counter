@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: -webkit-linear-gradient(135deg, #d4d2d1 30%, #8e8a86 90%);
+  background-image: linear-gradient(135deg, #d4d2d1 30%, #8e8a86 90%);
+}
+
+/* THE NUMBER COUNTER AND ACTUAL NUMBER */
+
+.mainCounter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-family: "Bubblegum Sans", sans-serif;
+  position: relative;
+  display: inline-block;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: orangered;
+  text-shadow: 3px 3px 0px #e7eef1, 8px 8px 0px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.textNumber {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  display: inline-block;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  color: orangered;
+  text-shadow: 3px 3px 0px #e7eef1, 8px 8px 0px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+/* THE BUTTONS */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decrease,
+.reset,
+.increase {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  background-color: #e7eef1;
+  border: solid 10px transparent;
+  border-image: linear-gradient(to top right, orangered, yellow);
+  border-image-slice: 1;
+  color: orangered;
+  transition: all 0.3s ease-in-out;
+  margin: 1rem;
+  font-weight: 550;
+}
+
+.decrease:hover,
+.reset:hover,
+.increase:hover {
+  background-image: linear-gradient(to top right, orangered, yellow);
+  color: white;
+}
+
+.decrease:active,
+.reset:active,
+.increase:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
